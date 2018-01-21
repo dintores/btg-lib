@@ -3,9 +3,9 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var bchLib = require('..');
-var Constants = bchLib.Constants;
-var networks = bchLib.Networks;
+var btgLib = require('..');
+var Constants = btgLib.Constants;
+var networks = btgLib.Networks;
 
 describe('Networks', function() {
 

@@ -7,7 +7,7 @@ We're working hard to make the most powerful JavaScript libraries for working wi
 
 If there are any questions, etc., please feel to ask in one of the community channels:
 
-- https://github.com/owstack/bch-lib/issues (Development Issues)
+- https://github.com/owstack/btg-lib/issues (Development Issues)
 
 ## Quick Checklist
 
@@ -205,14 +205,14 @@ Don't write long tests, write helper functions to make them be as short and conc
 
 Inputs for tests should not be generated randomly. Also, the type and structure of outputs should be checked.
 
-#### T3 - Require 'bch-lib' and Look up Classes from There
+#### T3 - Require 'btg-lib' and Look up Classes from There
 
-This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the bchLib object.
+This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the btgLib object.
 
 DO:
 ```javascript
-var bchLib = require('../');
-var PublicKey = bchLib.PublicKey;
+var btgLib = require('../');
+var PublicKey = btgLib.PublicKey;
 ```
 DON'T:
 ```javascript
@@ -245,7 +245,7 @@ git checkout -b remove/some-file
 
 We expect pull requests to be rebased to the master branch before merging:
 ```sh
-git remote add owstack git@github.com:owstack/bch-lib.git
+git remote add owstack git@github.com:owstack/btg-lib.git
 git pull --rebase owstack master
 ```
 
@@ -257,11 +257,11 @@ git push origin your_branch_name
 git push origin feature/some-new-stuff
 git push origin fix/some-bug
 ```
-Finally go to [github.com/owstack/bch-lib](https://github.com/owstack/bch-lib) in your web browser and issue a new pull request.
+Finally go to [github.com/owstack/btg-lib](https://github.com/owstack/btg-lib) in your web browser and issue a new pull request.
 
-Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of bch-lib.
+Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of btg-lib.
 
 If you have any questions feel free to post them to
-[github.com/owstack/owstack/bch-lib/issues](https://github.com/owstack/owstack/bch-lib/issues).
+[github.com/owstack/owstack/btg-lib/issues](https://github.com/owstack/owstack/btg-lib/issues).
 
 Thanks for your time and code!

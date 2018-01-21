@@ -4,14 +4,14 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var bchLib = require('../../..');
-var Address = bchLib.Address;
-var MultiSigInput = bchLib.Transaction.Input.MultiSig;
-var PrivateKey = bchLib.PrivateKey;
-var Script = bchLib.Script;
-var Signature = bchLib.crypto.Signature;
-var Transaction = bchLib.Transaction;
-var _ = bchLib.deps._;
+var btgLib = require('../../..');
+var Address = btgLib.Address;
+var MultiSigInput = btgLib.Transaction.Input.MultiSig;
+var PrivateKey = btgLib.PrivateKey;
+var Script = btgLib.Script;
+var Signature = btgLib.crypto.Signature;
+var Transaction = btgLib.Transaction;
+var _ = btgLib.deps._;
 
 describe('MultiSigInput', function() {
 

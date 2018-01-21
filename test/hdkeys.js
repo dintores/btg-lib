@@ -14,12 +14,12 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 var sinon = require('sinon');
 
-var bchLib = require('..');
-var Constants = bchLib.Constants;
-var HDPrivateKey = bchLib.HDPrivateKey;
-var HDPublicKey = bchLib.HDPublicKey;
-var Networks = bchLib.Networks;
-var _ = bchLib.deps._;
+var btgLib = require('..');
+var Constants = btgLib.Constants;
+var HDPrivateKey = btgLib.HDPrivateKey;
+var HDPublicKey = btgLib.HDPublicKey;
+var Networks = btgLib.Networks;
+var _ = btgLib.deps._;
 
 describe('HDKeys building with static methods', function() {
   var classes = [HDPublicKey, HDPrivateKey];
@@ -281,9 +281,9 @@ describe('BIP32 compliance', function() {
       var invalid = new Buffer('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
       var privateKeyBuffer = new Buffer('5f72914c48581fc7ddeb944a9616389200a9560177d24f458258e5b04527bcd1', 'hex');
       var chainCodeBuffer = new Buffer('39816057bba9d952fe87fe998b7fd4d690a1bb58c2ff69141469e4d1dffb4b91', 'hex');
-      var unstubbed = bchLib.crypto.BN.prototype.toBuffer;
+      var unstubbed = btgLib.crypto.BN.prototype.toBuffer;
       var count = 0;
-      var stub = sandbox.stub(bchLib.crypto.BN.prototype, 'toBuffer', function(args) {
+      var stub = sandbox.stub(btgLib.crypto.BN.prototype, 'toBuffer', function(args) {
         // On the fourth call to the function give back an invalid private key
         // otherwise use the normal behavior.
         count++;
@@ -293,7 +293,7 @@ describe('BIP32 compliance', function() {
         var ret = unstubbed.apply(this, arguments);
         return ret;
       });
-      sandbox.spy(bchLib.PrivateKey, 'isValid');
+      sandbox.spy(btgLib.PrivateKey, 'isValid');
       var key = HDPrivateKey.fromObject({
         network: Constants.TESTNET,
         depth: 0,
@@ -304,7 +304,7 @@ describe('BIP32 compliance', function() {
       });
       var derived = key.derive("m/44'");
       derived.privateKey.toString().should.equal('b15bce3608d607ee3a49069197732c656bca942ee59f3e29b4d56914c1de6825');
-      bchLib.PrivateKey.isValid.callCount.should.equal(2);
+      btgLib.PrivateKey.isValid.callCount.should.equal(2);
     });
     it('will handle edge case that a derive public key is invalid', function() {
       var publicKeyBuffer = new Buffer('029e58b241790284ef56502667b15157b3fc58c567f044ddc35653860f9455d099', 'hex');
@@ -317,9 +317,9 @@ describe('BIP32 compliance', function() {
         chainCode: chainCodeBuffer,
         publicKey: publicKeyBuffer
       });
-      var unstubbed = bchLib.PublicKey.fromPoint;
-      bchLib.PublicKey.fromPoint = function() {
-        bchLib.PublicKey.fromPoint = unstubbed;
+      var unstubbed = btgLib.PublicKey.fromPoint;
+      btgLib.PublicKey.fromPoint = function() {
+        btgLib.PublicKey.fromPoint = unstubbed;
         throw new Error('Point cannot be equal to Infinity');
       };
       sandbox.spy(key, '_deriveWithNumber');
@@ -349,7 +349,7 @@ describe('BIP32 compliance', function() {
 var vector1_master = '000102030405060708090a0b0c0d0e0f';
 var vector1_m_public = 'xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8';
 var vector1_m_private = 'xprv9s21ZrQH143K3QTDL4LXw2F7HEK3wJUD2nW2nRk4stbPy6cq3jPPqjiChkVvvNKmPGJxWUtg6LnF5kejMRNNU3TGtRBeJgk33yuGBxrMPHi';
-var vector1_m0h_public = 'xpub68Gmy5EdvgibQVfPdqkBBCHxA5htiqg55crXYuXoQRKfDBFA1WEjWgP6LHhwBZeNK1VTsfTFUHCdrfp1bgwQ9xv5ski8PX9rL2dZXvgGDnw';
+var vector1_m0h_public = 'xpub68Gmy5EdvgibQVfPdqkBBTGxA5htiqg55crXYuXoQRKfDBFA1WEjWgP6LHhwBZeNK1VTsfTFUHCdrfp1bgwQ9xv5ski8PX9rL2dZXvgGDnw';
 var vector1_m0h_private = 'xprv9uHRZZhk6KAJC1avXpDAp4MDc3sQKNxDiPvvkX8Br5ngLNv1TxvUxt4cV1rGL5hj6KCesnDYUhd7oWgT11eZG7XnxHrnYeSvkzY7d2bhkJ7';
 var vector1_m0h1_public = 'xpub6ASuArnXKPbfEwhqN6e3mwBcDTgzisQN1wXN9BJcM47sSikHjJf3UFHKkNAWbWMiGj7Wf5uMash7SyYq527Hqck2AxYysAA7xmALppuCkwQ';
 var vector1_m0h1_private = 'xprv9wTYmMFdV23N2TdNG573QoEsfRrWKQgWeibmLntzniatZvR9BmLnvSxqu53Kw1UmYPxLgboyZQaXwTCg8MSY3H2EU4pWcQDnRnrVA1xe8fs';

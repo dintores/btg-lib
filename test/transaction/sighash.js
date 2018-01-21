@@ -3,11 +3,11 @@
 var chai = require('chai');
 var should = chai.should();
 
-var bchLib = require('../../');
-var BN = bchLib.crypto.BN;
-var Buffer = bchLib.deps.Buffer;
-var Script = bchLib.Script;
-var Transaction = bchLib.Transaction;
+var btgLib = require('../../');
+var BN = btgLib.crypto.BN;
+var Buffer = btgLib.deps.Buffer;
+var Script = btgLib.Script;
+var Transaction = btgLib.Transaction;
 var sighash = Transaction.sighash;
 var vectors_sighash = require('../data/sighash.json');
 

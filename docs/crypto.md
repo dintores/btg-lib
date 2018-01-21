@@ -1,4 +1,4 @@
-# Bitcoin Cash Crypto
+# Bitcoin Gold Crypto
 The cryptographic primitives (ECDSA and HMAC) implementations in this package have been reviewed by the Open Wallet Stack engineering team. More audits and reviews are welcomed.
 
 ## Point

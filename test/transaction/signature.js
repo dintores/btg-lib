@@ -5,13 +5,13 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var bchLib = require('../..');
-var errors = bchLib.errors;
-var Script = bchLib.Script;
-var PrivateKey = bchLib.PrivateKey;
-var Transaction = bchLib.Transaction;
-var TransactionSignature = bchLib.Transaction.Signature;
-var _ = bchLib.deps._;
+var btgLib = require('../..');
+var errors = btgLib.errors;
+var Script = btgLib.Script;
+var PrivateKey = btgLib.PrivateKey;
+var Transaction = btgLib.Transaction;
+var TransactionSignature = btgLib.Transaction.Signature;
+var _ = btgLib.deps._;
 
 describe('TransactionSignature', function() {
 

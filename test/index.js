@@ -2,4 +2,4 @@
 
 var should = require('chai').should();
 
-var bchLib = require('../');
+var btgLib = require('../');

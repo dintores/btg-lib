@@ -3,13 +3,13 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var bchLib = require('../..');
-var Address = bchLib.Address;
-var BufferUtil = bchLib.util.buffer;
-var Networks = bchLib.Networks;
-var Opcode = bchLib.Opcode;
-var PublicKey = bchLib.PublicKey;
-var Script = bchLib.Script;
+var btgLib = require('../..');
+var Address = btgLib.Address;
+var BufferUtil = btgLib.util.buffer;
+var Networks = btgLib.Networks;
+var Opcode = btgLib.Opcode;
+var PublicKey = btgLib.PublicKey;
+var Script = btgLib.Script;
 
 describe('Script', function() {
 
@@ -254,7 +254,7 @@ describe('Script', function() {
       // from txid: 5c85ed63469aa9971b5d01063dbb8bcdafd412b2f51a3d24abf2e310c028bbf8
       // and input index: 5
       var scriptBuffer = new Buffer('483045022050eb59c79435c051f45003d9f82865c8e4df5699d7722e77113ef8cadbd92109022100d4ab233e070070eb8e0e62e3d2d2eb9474a5bf135c9eda32755acb0875a6c20601', 'hex');
-      var script = bchLib.Script.fromBuffer(scriptBuffer);
+      var script = btgLib.Script.fromBuffer(scriptBuffer);
       script.isPublicKeyIn().should.equal(true);
     });
   });
@@ -955,7 +955,7 @@ describe('Script', function() {
     });
     it('should handle P2SH-multisig-in scripts from utility', function() {
       // create a well-formed signature, does not need to match pubkeys
-      var signature = bchLib.crypto.Signature.fromString('30060201FF0201FF');
+      var signature = btgLib.crypto.Signature.fromString('30060201FF0201FF');
       var signatures = [ signature.toBuffer() ];
       var p2sh = Script.buildP2SHMultisigIn(pubKeyHexes, 1, signatures, {});
       p2sh.getSignatureOperationsCount(true).should.equal(0);

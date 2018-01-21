@@ -3,14 +3,14 @@
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-var bchLib = require('..');
-var Address = bchLib.Address;
-var BN = bchLib.crypto.BN;
-var Constants = bchLib.Constants;
-var Networks = bchLib.Networks;
-var Point = bchLib.crypto.Point;
-var PublicKey = bchLib.PublicKey;
-var PrivateKey = bchLib.PrivateKey;
+var btgLib = require('..');
+var Address = btgLib.Address;
+var BN = btgLib.crypto.BN;
+var Constants = btgLib.Constants;
+var Networks = btgLib.Networks;
+var Point = btgLib.crypto.Point;
+var PublicKey = btgLib.PublicKey;
+var PrivateKey = btgLib.PrivateKey;
 
 /* jshint maxlen: 200 */
 

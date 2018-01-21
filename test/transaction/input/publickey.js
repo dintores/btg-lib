@@ -2,9 +2,9 @@
 
 var should = require('chai').should();
 
-var bchLib = require('../../..');
-var PrivateKey = bchLib.PrivateKey;
-var Transaction = bchLib.Transaction;
+var btgLib = require('../../..');
+var PrivateKey = btgLib.PrivateKey;
+var Transaction = btgLib.Transaction;
 
 describe('PublicKeyInput', function() {
 

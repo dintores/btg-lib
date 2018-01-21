@@ -2,14 +2,14 @@
 
 var should = require('chai').should();
 
-var bchLib = require('../..');
-var BN = bchLib.crypto.BN;
-var JSUtil = bchLib.util.js;
-var Interpreter = bchLib.Script.Interpreter;
+var btgLib = require('../..');
+var BN = btgLib.crypto.BN;
+var JSUtil = btgLib.util.js;
+var Interpreter = btgLib.Script.Interpreter;
 var sig_canonical = require('../data/bitcoind/sig_canonical');
 var sig_noncanonical = require('../data/bitcoind/sig_noncanonical');
-var Signature = bchLib.crypto.Signature;
-var _ = bchLib.deps._;
+var Signature = btgLib.crypto.Signature;
+var _ = btgLib.deps._;
 
 describe('Signature', function() {
 

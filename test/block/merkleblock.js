@@ -2,12 +2,12 @@
 
 var should = require('chai').should();
 
-var bchLib = require('../..');
-var BufferReader = bchLib.encoding.BufferReader;
-var BufferWriter = bchLib.encoding.BufferWriter;
+var btgLib = require('../..');
+var BufferReader = btgLib.encoding.BufferReader;
+var BufferWriter = btgLib.encoding.BufferWriter;
 var data = require('../data/merkleblocks.js');
-var MerkleBlock = bchLib.MerkleBlock;
-var Transaction = bchLib.Transaction;
+var MerkleBlock = btgLib.MerkleBlock;
+var Transaction = btgLib.Transaction;
 var transactionVector = require('../data/tx_creation');
 
 describe('MerkleBlock', function() {

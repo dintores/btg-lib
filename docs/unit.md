@@ -1,24 +1,24 @@
 # Unit
-Unit is a utility for handling and converting bitcoin cash units. We strongly recommend to always use satoshis to represent amount inside your application and only convert them to other units in the front-end.
+Unit is a utility for handling and converting bitcoin gold units. We strongly recommend to always use satoshis to represent amount inside your application and only convert them to other units in the front-end.
 
 To understand the need of using the `Unit` class when dealing with unit conversions, see this example:
 
 ```
 > 81.99 * 100000 // wrong
 8198999.999999999
-> var bchLib = require('@owstack/bch-lib');
-> var Unit = bchLib.Unit;
+> var btgLib = require('@owstack/btg-lib');
+> var Unit = btgLib.Unit;
 > Unit.fromMilis(81.99).toSatoshis() // correct
 8199000
 ```
 
 ## Supported units
-The supported units are BCH, mBCH, bits (micro BCHs, uBCH) and satoshis. The codes for each unit can be found as members of the Unit class.
+The supported units are BTG, mBTG, bits (micro BTGs, uBTG) and satoshis. The codes for each unit can be found as members of the Unit class.
 
 ```javascript
-var bchCode = Unit.BCH;
-var mbchCode = Unit.mBCH;
-var ubchCode = Unit.uBCH;
+var bchCode = Unit.BTG;
+var mbchCode = Unit.mBTG;
+var ubchCode = Unit.uBTG;
 var bitsCode = Unit.bits;
 var satsCode = Unit.satoshis;
 ```
@@ -31,11 +31,11 @@ var unit;
 var amount = 100;
 
 // using a unit code
-var unitPreference = Unit.BCH;
+var unitPreference = Unit.BTG;
 unit = new Unit(amount, unitPreference);
 
 // using a known unit
-unit = Unit.fromBCH(amount);
+unit = Unit.fromBTG(amount);
 unit = Unit.fromMilis(amount);
 unit = Unit.fromBits(amount);
 unit = Unit.fromSatoshis(amount);
@@ -48,24 +48,24 @@ Once you have a unit instance, you can check its representation in all the avail
 var unit;
 
 // using a unit code
-var unitPreference = Unit.BCH;
+var unitPreference = Unit.BTG;
 value = Unit.fromSatoshis(amount).to(unitPreference);
 
 // using a known unit
-value = Unit.fromBCH(amount).toBCH();
-value = Unit.fromBCH(amount).toMilis();
-value = Unit.fromBCH(amount).toBits();
-value = Unit.fromBCH(amount).toSatoshis();
+value = Unit.fromBTG(amount).toBTG();
+value = Unit.fromBTG(amount).toMilis();
+value = Unit.fromBTG(amount).toBits();
+value = Unit.fromBTG(amount).toSatoshis();
 
 // using accessors
-value = Unit.fromBCH(amount).BCH;
-value = Unit.fromBCH(amount).mBCH;
-value = Unit.fromBCH(amount).bits;
-value = Unit.fromBCH(amount).satoshis;
+value = Unit.fromBTG(amount).BTG;
+value = Unit.fromBTG(amount).mBTG;
+value = Unit.fromBTG(amount).bits;
+value = Unit.fromBTG(amount).satoshis;
 ```
 
 ## Using a fiat currency
-The unit class also provides a convenient alternative to create an instance from a fiat amount and the corresponding BCH/fiat exchange rate. Any unit instance can be converted to a fiat amount by providing the current exchange rate. Check the example below:
+The unit class also provides a convenient alternative to create an instance from a fiat amount and the corresponding BTG/fiat exchange rate. Any unit instance can be converted to a fiat amount by providing the current exchange rate. Check the example below:
 
 ```javascript
 var unit, fiat;

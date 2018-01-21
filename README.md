@@ -1,45 +1,45 @@
-BCH Lib
+BTG Lib
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/@owstack/bch-lib.svg?style=flat-square)](https://www.npmjs.org/package/@owstack/bch-lib)
-[![Build Status](https://img.shields.io/travis/owstack/bch-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/bch-lib)
-[![Coverage Status](https://img.shields.io/coveralls/owstack/bch-lib.svg?style=flat-square)](https://coveralls.io/r/owstack/bch-lib)
+[![NPM Package](https://img.shields.io/npm/v/@owstack/btg-lib.svg?style=flat-square)](https://www.npmjs.org/package/@owstack/btg-lib)
+[![Build Status](https://img.shields.io/travis/owstack/btg-lib.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btg-lib)
+[![Coverage Status](https://img.shields.io/coveralls/owstack/btg-lib.svg?style=flat-square)](https://coveralls.io/r/owstack/btg-lib)
 
-A pure and powerful JavaScript Bitcoin Cash library.
+A pure and powerful JavaScript Bitcoin Gold library.
 
 ## What this provides
 
-This repository extends @owstack/satoshi-common-lib with bitcoin-cash fork changes
+This repository extends @owstack/satoshi-common-lib with bitcoin-gold fork changes
 
 ## Principles
 
-Bitcoin Cash is an other powerful peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services.
+Bitcoin Gold is an other powerful peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Gold network allows for highly resilient bitcoin gold infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin gold apps and services.
 
-## Bitcoin Cash vs. Bitcoin
+## Bitcoin Gold vs. Bitcoin
 
-Bitcoin Cash uses a different `sighash` for transaction signatures. The implementation in bitcore cash has been tested against the original bitcoin cash test vectors (see sighash.json in `/test`). `bitcoin cash` modifications in script evaluation has not been implemented yet.
+Bitcoin Gold uses a different `sighash` for transaction signatures. The implementation has been tested against the original bitcoin gold test vectors (see sighash.json in `/test`). `bitcoin gold` modifications in script evaluation has not been implemented yet.
 
 ## Get Started
 
 ```
-npm install bch-lib
+npm install btg-lib
 ```
 
 ```
-bower install bch-lib
+bower install btg-lib
 ```
 
 ## Examples
 
-* [Generate a random address](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#generate-a-random-address)
-* [Generate a address from a SHA256 hash](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#generate-a-address-from-a-sha256-hash)
-* [Import an address via WIF](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#import-an-address-via-wif)
-* [Create a Transaction](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#create-a-transaction)
-* [Sign a Bitcoin Cash message](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#sign-a-bitcoin-cash-message)
-* [Verify a Bitcoin Cash message](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#verify-a-bitcoin-cash-message)
-* [Create an OP RETURN transaction](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#create-an-op-return-transaction)
-* [Create a 2-of-3 multisig P2SH address](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
-* [Spend from a 2-of-2 multisig P2SH address](https://github.com/owstack/bch-lib/blob/master/docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
+* [Generate a random address](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#generate-a-random-address)
+* [Generate a address from a SHA256 hash](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#generate-a-address-from-a-sha256-hash)
+* [Import an address via WIF](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#import-an-address-via-wif)
+* [Create a Transaction](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#create-a-transaction)
+* [Sign a Bitcoin Gold message](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#sign-a-bitcoin-gold-message)
+* [Verify a Bitcoin Gold message](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#verify-a-bitcoin-gold-message)
+* [Create an OP RETURN transaction](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#create-an-op-return-transaction)
+* [Create a 2-of-3 multisig P2SH address](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
+* [Spend from a 2-of-2 multisig P2SH address](https://github.com/owstack/btg-lib/blob/master/docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
 
 
 ## Security
@@ -48,11 +48,11 @@ If you find a security issue, please email security@openwalletstack.com.
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/owstack/bch-lib/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/owstack/btg-lib/blob/master/CONTRIBUTING.md) file.
 
 ## Building the Browser Bundle
 
-To build a bch-lib full bundle for the browser:
+To build a btg-lib full bundle for the browser:
 
 ```sh
 gulp browser
@@ -60,7 +60,7 @@ gulp browser
 
 This will generate files named `bch.js` and `bch.min.js`.
 
-You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/owstack/bch-lib/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
+You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/owstack/btg-lib/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
 
 To verify signatures, use the following PGP keys:
 - @braydonf: https://pgp.mit.edu/pks/lookup?op=get&search=0x9BBF07CAC07A276D `D909 EFE6 70B5 F6CC 89A3 607A 9BBF 07CA C07A 276D`
@@ -72,8 +72,8 @@ To verify signatures, use the following PGP keys:
 ## Development & Tests
 
 ```sh
-git clone https://github.com/owstack/bch-lib
-cd bch-lib
+git clone https://github.com/owstack/btg-lib
+cd btg-lib
 npm install
 ```
 
@@ -88,6 +88,6 @@ or create a test coverage report (you can open `coverage/lcov-report/index.html`
 
 ## License
 
-Code released under [the MIT license](https://github.com/owstack/bch-lib/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/owstack/btg-lib/blob/master/LICENSE).
 
 Copyright 2017 Open Wallet Stack.

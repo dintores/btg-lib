@@ -10,8 +10,8 @@ An instance of a [PrivateKey](privatekey.md) that also contains information requ
 Sample usage:
 
 ```javascript
-var bchLib = require('@owstack/bch-lib');
-var HDPrivateKey = bchLib.HDPrivateKey;
+var btgLib = require('@owstack/btg-lib');
+var HDPrivateKey = btgLib.HDPrivateKey;
 
 var hdPrivateKey = new HDPrivateKey();
 var retrieved = new HDPrivateKey('xpriv...');

@@ -2,19 +2,19 @@
 
 var should = require('chai').should();
 
-var bchLib = require('../..');
-var BN = bchLib.crypto.BN;
-var BufferWriter = bchLib.encoding.BufferWriter;
-var Interpreter = bchLib.Script.Interpreter;
-var Opcode = bchLib.Opcode;
-var PrivateKey = bchLib.PrivateKey;
-var Script = bchLib.Script;
+var btgLib = require('../..');
+var BN = btgLib.crypto.BN;
+var BufferWriter = btgLib.encoding.BufferWriter;
+var Interpreter = btgLib.Script.Interpreter;
+var Opcode = btgLib.Opcode;
+var PrivateKey = btgLib.PrivateKey;
+var Script = btgLib.Script;
 var script_valid = require('../data/bitcoind/script_valid');
 var script_invalid = require('../data/bitcoind/script_invalid');
-var Transaction = bchLib.Transaction;
+var Transaction = btgLib.Transaction;
 var tx_valid = require('../data/bitcoind/tx_valid');
 var tx_invalid = require('../data/bitcoind/tx_invalid');
-var _ = bchLib.deps._;
+var _ = btgLib.deps._;
 
 //the script string format used in bitcoind data tests
 Script.fromBitcoindString = function(str) {

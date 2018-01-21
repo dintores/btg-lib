@@ -1,7 +1,7 @@
 'use strict';
 
-var bchLib = require('../..');
-var Transaction = bchLib.Transaction;
+var btgLib = require('../..');
+var Transaction = btgLib.Transaction;
 var vectors_valid = require('../data/bitcoind/tx_valid.json');
 var vectors_invalid = require('../data/bitcoind/tx_invalid.json');
 

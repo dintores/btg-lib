@@ -2,9 +2,9 @@
 
 var should = require('chai').should();
 
-var bchLib = require('../..');
-var BN = bchLib.crypto.BN;
-var Point = bchLib.crypto.Point;
+var btgLib = require('../..');
+var BN = btgLib.crypto.BN;
+var Point = btgLib.crypto.Point;
 
 describe('Point', function() {
 

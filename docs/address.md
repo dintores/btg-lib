@@ -1,8 +1,8 @@
-# Bitcoin Cash Address
-Represents a bitcoin cash address. Addresses are the most popular way to make bitcoin cash transactions. See [the official Bitcoin Wiki](https://en.bitcoin.it/wiki/Address) for technical background information.
+# Bitcoin Gold Address
+Represents a bitcoin gold address. Addresses are the most popular way to make bitcoin gold transactions. See [the official Bitcoin Wiki](https://en.bitcoin.it/wiki/Address) for technical background information.
 
 ## Instantiate an Address
-To be able to receive bitcoin cash an address is needed, but in order to spend them a private key is necessary. Please take a look at the [`PrivateKey`](privatekey.md) docs for more information about exporting and saving a key.  
+To be able to receive bitcoin gold an address is needed, but in order to spend them a private key is necessary. Please take a look at the [`PrivateKey`](privatekey.md) docs for more information about exporting and saving a key.  
 
 ```javascript
 var privateKey = new PrivateKey();
@@ -62,4 +62,4 @@ var error = Address.getValidationError(input, Networks.testnet);
 }
 ```
 
-The errors are listed in the generated file in the [errors folder](https://github.com/owstack/bch-lib/tree/master/lib/errors). There's a structure to errors defined in the [spec.js file](https://github.com/owstack/bch-lib/tree/master/lib/errors/spec.js).
+The errors are listed in the generated file in the [errors folder](https://github.com/owstack/btg-lib/tree/master/lib/errors). There's a structure to errors defined in the [spec.js file](https://github.com/owstack/btg-lib/tree/master/lib/errors/spec.js).

@@ -40,7 +40,7 @@ var transaction = new bch.Transaction()
   .sign(privateKey);
 ```
 
-## Sign a Bitcoin Cash message
+## Sign a Bitcoin Gold message
 ```javascript
 var Message = require('@owstack/bch-message');
 
@@ -50,7 +50,7 @@ var message = new Message('This is an example of a signed message.');
 var signature = message.sign(privateKey);
 ```
 
-## Verify a Bitcoin Cash message
+## Verify a Bitcoin Gold message
 ```javascript
 var Message = require('@owstack/bch-message');
 

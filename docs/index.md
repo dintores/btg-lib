@@ -2,7 +2,7 @@
 
 ## Principles
 
-Bitcoin Cash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Cash network allows for highly resilient bitcoin cash infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin cash apps and services. Bch Lib provides a reliable API for JavaScript apps that need to interface with Bitcoin Cash.
+Bitcoin Gold is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin Gold network allows for highly resilient bitcoin gold infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin gold apps and services. Bch Lib provides a reliable API for JavaScript apps that need to interface with Bitcoin Gold.
 
 To get started, just `npm install bch` or `bower install bch`.
 
@@ -17,10 +17,10 @@ To get started, just `npm install bch` or `bower install bch`.
 
 ## Payment Handling
 * [Using Different Units](unit.md)
-* [Acknowledging and Requesting Payments: Bitcoin Cash URIs](uri.md)
+* [Acknowledging and Requesting Payments: Bitcoin Gold URIs](uri.md)
 * [The Transaction Class](transaction.md)
 
-## Bitcoin Cash Internals
+## Bitcoin Gold Internals
 * [Scripts](script.md)
 * [Block](block.md)
 
@@ -37,7 +37,7 @@ Some functionality is implemented as a module that can be installed separately:
 
 * [Payment Protocol Support](https://github.com/owstack/bch-payment-protocol)
 * [Peer to Peer Networking](https://github.com/owstack/bch-p2p)
-* [Bitcoin Cash Core JSON-RPC](https://github.com/owstack/bitcoind-rpc)
+* [Bitcoin Gold Core JSON-RPC](https://github.com/owstack/bitcoind-rpc)
 * [Payment Channels](https://github.com/owstack/bch-channel)
 * [Mnemonics](https://github.com/owstack/bch-mnemonic)
 * [Elliptical Curve Integrated Encryption Scheme](https://github.com/owstack/bch-ecies)
